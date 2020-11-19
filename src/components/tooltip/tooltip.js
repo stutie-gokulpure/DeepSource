@@ -2,6 +2,17 @@ import React, {useState} from "react";
 import PropTypes from 'prop-types';
 import "./tooltip.scss";
 
+/**
+ * Tooltip wrapper component which wraps any child element.
+ *
+ * @param delay time taken to display the tooltip
+ * @param direction direction of the tooltip
+ * @param label tooltip text to display
+ * @param width specific width of the tooltip
+ * @param children child element
+ * @returns {*}
+ * @constructor
+ */
 const Tooltip = ({ delay, direction, label, width, children }) => {
     let timeout;
     const [active, setActive] = useState(false);
